@@ -6,7 +6,9 @@
     "npm:@abcnews/svelte-scrollyteller@^4.0.1": "4.0.1_svelte@5.56.9",
     "npm:@sveltejs/vite-plugin-svelte@^7.2.0": "7.3.0_svelte@5.56.9_vite@8.2.1__@types+node@24.13.3__terser@5.50.0_terser@5.50.0",
     "npm:@tsconfig/svelte@^5.0.8": "5.0.8",
+    "npm:@types/alpinejs@^3.13.11": "3.13.11",
     "npm:@types/node@^24.13.3": "24.13.3",
+    "npm:alpinejs@^3.16.2": "3.16.2",
     "npm:svelte-check@^4.7.3": "4.7.6_svelte@5.56.9_typescript@6.0.3",
     "npm:svelte-portal@^2.2.1": "2.2.1",
     "npm:svelte@^5.56.8": "5.56.9",
@@ -167,6 +169,9 @@
     "@tsconfig/svelte@5.0.8": {
       "integrity": "sha512-UkNnw1/oFEfecR8ypyHIQuWYdkPvHiwcQ78sh+ymIiYoF+uc5H1UBetbjyqT+vgGJ3qQN6nhucJviX6HesWtKQ=="
     },
+    "@types/alpinejs@3.13.11": {
+      "integrity": "sha512-3KhGkDixCPiLdL3Z/ok1GxHwLxEWqQOKJccgaQL01wc0EVM2tCTaqlC3NIedmxAXkVzt/V6VTM8qPgnOHKJ1MA=="
+    },
     "@types/estree@1.0.9": {
       "integrity": "sha512-GhdPgy1el4/ImP05X05Uw4cw2/M93BCUmnEvWZNStlCzEKME4Fkk+YpoA5OiHNQmoS7Cafb8Xa3Pya8m1Qrzeg=="
     },
@@ -179,9 +184,24 @@
     "@types/trusted-types@2.0.7": {
       "integrity": "sha512-ScaPdn1dQczgbl0QFTeTOmVHFULt394XJgOQNoyVhZ6r2vLnMLJfBPd53SB52T/3G36VI1/g2MZaX0cwDuXsfw=="
     },
+    "@vue/reactivity@3.5.41": {
+      "integrity": "sha512-rznsqKM0np0x18EjzF8x88MpEhdNsffbvFbckLL5+oUKz1BxAImEmO7J1ArRYSyo6aQaVoBDp7jEkT91OOxydA==",
+      "dependencies": [
+        "@vue/shared"
+      ]
+    },
+    "@vue/shared@3.5.41": {
+      "integrity": "sha512-IOnwSCma8j+9xJT6b8H0dEYidC80NsYmNMlZxRsukYcSoGaDBohog5hDxzeUXdFeGWFA++vWvxqOmrr96VlqMA=="
+    },
     "acorn@8.18.0": {
       "integrity": "sha512-lGq+9yr1/GuAWaVYIHRjvvySG5/4VfKIvC8EWxStPdcDh/Ka7FG3twP6v4d5BkravUilhIAsG4Qj83t02LWUPQ==",
       "bin": true
+    },
+    "alpinejs@3.16.2": {
+      "integrity": "sha512-6kbqqrRK7iGPYx5upTfqc8Tcl1xhpcurLCxTdn4/ym2Kb68+cYj+2I5Zji53vUIPf7zj3C1DoIvrDkgrNDCXdA==",
+      "dependencies": [
+        "@vue/reactivity"
+      ]
     },
     "aria-query@5.3.1": {
       "integrity": "sha512-Z/ZeOgVl7bcSYZ/u/rh0fOpvEpq//LZmdbkXyc7syVzjPAhfOa9ebsdTSjEBDU4vs5nC98Kfduj1uFo0qyET3g=="
@@ -507,7 +527,9 @@
         "npm:@abcnews/svelte-scrollyteller@^4.0.1",
         "npm:@sveltejs/vite-plugin-svelte@^7.2.0",
         "npm:@tsconfig/svelte@^5.0.8",
+        "npm:@types/alpinejs@^3.13.11",
         "npm:@types/node@^24.13.3",
+        "npm:alpinejs@^3.16.2",
         "npm:svelte-check@^4.7.3",
         "npm:svelte-portal@^2.2.1",
         "npm:svelte@^5.56.8",

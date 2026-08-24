@@ -2,19 +2,24 @@
 	import Stage from "./components/Stage.svelte";
 	import Portal from "svelte-portal";
 	import Scrollyteller from "@abcnews/svelte-scrollyteller";
+	import Alpine from "alpinejs";
 
 	import { scroll } from "./stores/scroll.svelte";
 
 	const { panels } = $props();
 
-	let marker = $state(0);
+	let marker = $state<any>();
 	let progress = $state();
+
+	$inspect(marker);
+
+	$effect(() => {
+		window.Alpine = Alpine;
+		Alpine.start();
+	});
 </script>
 
 <div class="app">
-	<Portal target="[data-key=stage]">
-		<Stage />
-	</Portal>
 	<Scrollyteller
 		{panels}
 		onMarker={(data) => {
@@ -25,11 +30,11 @@
 		}}
 		layout={{
 			align: "left",
-			// resizeInteractive: true
+			// resizeInteractive: false
 			// transparentFloat: true
 		}}
 	>
-		<div>Hello</div>
+		<Stage car={marker?.car || ""} />
 	</Scrollyteller>
 </div>
 

@@ -2,15 +2,23 @@ import { mount } from "svelte";
 import { whenDOMReady, whenOdysseyLoaded } from "@abcnews/env-utils";
 import { selectMounts } from "@abcnews/mount-utils";
 import { loadScrollyteller } from "@abcnews/svelte-scrollyteller";
-console.log(loadScrollyteller);
 
 import "./global.css";
+
+declare global {
+   interface Window {
+       Alpine:any;
+   }
+	}
 
 import App from "./App.svelte";
 
 export type MyPanelData = {
-	panels: any
+	car: string;
 };
+
+await whenDOMReady;
+await whenOdysseyLoaded;
 
 const scrollyMounts = selectMounts("scrollyteller");
 
@@ -28,13 +36,3 @@ scrollyMounts.forEach((mountNode) => {
 		props: { panels: scrollyData.panels },
 	});
 });
-
-await whenDOMReady;
-await whenOdysseyLoaded;
-
-// const app = mount(App, {
-// 	target: document.querySelector("#interactive")!,
-// 	props: scrollyData
-// });
-
-// export default app;
