@@ -4,25 +4,20 @@
 	import everest from "../assets/scrollyteller_fordeverest.svg";
 
 	const cars = new Map([
-		["ford", ford],
-		["rav4", rav4],
-		["everest", everest],
+		["ford", { src: ford, alt: "Ford Falcon" }],
+		["rav4", { src: rav4, alt: "Rav4" }],
+		["everest", { src: everest, alt: "Ford Everest" }],
 	]);
 
 	type Car = "ford" | "rav4" | "everest";
 
 	const { car }: { car: Car } = $props();
+
+	const current = $derived(cars.get(car));
 </script>
 
 <div class="root">
-	<!-- <h1 x-data="{ message: 'I ❤️ Alpine' }" x-text="message"></h1> -->
-	{#if car === "ford"}
-		<img src={ford} alt="Ford Falcon" />
-	{:else if car === "rav4"}
-		<img src={rav4} alt="Rav4" />
-	{:else if car === "everest"}
-		<img src={everest} alt="Ford Everest" />
-	{/if}
+	<img src={current?.src} alt={current?.alt} />
 </div>
 
 <style lang="scss">
