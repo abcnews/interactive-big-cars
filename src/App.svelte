@@ -1,22 +1,20 @@
 <script lang="ts">
+	import type { Marker } from "./types";
 	import Stage from "./components/Stage.svelte";
-	import Scrollyteller from "@abcnews/svelte-scrollyteller";
+	import Scrollyteller from "./components/BoundScrollyteller.svelte";
 
-	// Shared state
+	/* Shared state */
 	import { scroll } from "./stores/scroll.svelte";
 
-	// Component props
+	/* Component props */
 	const { panels } = $props();
 
-	let marker = $state<any>();
-
-	function onMarker(data: Record<string, any>) {
-		marker = data;
-	}
+	/* Local state */
+	let marker = $state<Marker>({ car: "falcon" });
 </script>
 
 <div class="app">
-	<Scrollyteller {panels} {onMarker}>
+	<Scrollyteller {panels} bind:marker>
 		<Stage car={marker?.car || "ford"} />
 	</Scrollyteller>
 </div>

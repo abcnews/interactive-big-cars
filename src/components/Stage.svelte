@@ -1,17 +1,22 @@
 <script lang="ts">
+	import type { Marker } from "../types";
 	import ford from "../assets/scrollyteller_fordfalcon.svg";
 	import rav4 from "../assets/scrollyteller_rav4.svg";
 	import everest from "../assets/scrollyteller_fordeverest.svg";
+	import raptor from "../assets/scrollyteller_ford_raptor_ranger.svg";
+	import ram from "../assets/scrollyteller_chevrolet_ram.svg";
 
 	const cars = new Map([
 		["ford", { src: ford, alt: "Ford Falcon" }],
-		["rav4", { src: rav4, alt: "Rav4" }],
+		["rav4", { src: rav4, alt: "Toyota Rav4" }],
 		["everest", { src: everest, alt: "Ford Everest" }],
+		["raptor", { src: raptor, alt: "Ford Raptor" }],
+		["ram", { src: ram, alt: "Chevrolet Ram" }],
 	]);
 
-	type Car = "ford" | "rav4" | "everest";
+	type Props = Marker;
 
-	const { car }: { car: Car } = $props();
+	const { car }: Props = $props();
 
 	const current = $derived(cars.get(car));
 </script>
