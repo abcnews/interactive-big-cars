@@ -14,7 +14,6 @@
 		"@abcnews/mount-utils": "^3.0.1",
 		"@abcnews/svelte-scrollyteller": "^4.0.1",
 		"alpinejs": "^3.16.2",
-		"common-tags": "^1.8.2",
 		"svelte-portal": "^2.2.1"
 	},
 	"devDependencies": {

@@ -5,12 +5,6 @@ import { loadScrollyteller } from "@abcnews/svelte-scrollyteller";
 
 import "./global.css";
 
-declare global {
-   interface Window {
-       Alpine:any;
-   }
-	}
-
 import App from "./App.svelte";
 
 export type MyPanelData = {

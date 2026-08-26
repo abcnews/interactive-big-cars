@@ -1,40 +1,23 @@
 <script lang="ts">
 	import Stage from "./components/Stage.svelte";
-	import Portal from "svelte-portal";
 	import Scrollyteller from "@abcnews/svelte-scrollyteller";
-	import Alpine from "alpinejs";
 
+	// Shared state
 	import { scroll } from "./stores/scroll.svelte";
 
+	// Component props
 	const { panels } = $props();
 
 	let marker = $state<any>();
-	let progress = $state();
 
-	$inspect(marker);
-
-	$effect(() => {
-		window.Alpine = Alpine;
-		Alpine.start();
-	});
+	function onMarker(data: Record<string, any>) {
+		marker = data;
+	}
 </script>
 
 <div class="app">
-	<Scrollyteller
-		{panels}
-		onMarker={(data) => {
-			marker = data;
-		}}
-		onProgress={(type, payload) => {
-			progress = payload;
-		}}
-		layout={{
-			align: "left",
-			// resizeInteractive: false
-			// transparentFloat: true
-		}}
-	>
-		<Stage car={marker?.car || ""} />
+	<Scrollyteller {panels} {onMarker}>
+		<Stage car={marker?.car || "ford"} />
 	</Scrollyteller>
 </div>
 
