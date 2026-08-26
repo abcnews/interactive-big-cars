@@ -1,4 +1,4 @@
-import type { Marker } from "./types";
+import type { Marker } from "./types.ts";
 import { mount } from "svelte";
 import { whenDOMReady, whenOdysseyLoaded } from "@abcnews/env-utils";
 import { selectMounts } from "@abcnews/mount-utils";

@@ -9,13 +9,18 @@
 		children: Snippet;
 	};
 
-	let {
-		panels,
-		marker = $bindable<Marker>(),
-		children,
-	}: Props = $props();
+	let { panels, marker = $bindable<Marker>(), children }: Props = $props();
 </script>
 
-<Scrollyteller {panels} onMarker={(data: Marker) => (marker = data)}>
+<Scrollyteller
+	layout={{
+		align: "left",
+		// resizeInteractive: false
+		// transparentFloat: true
+		mobileVariant: "rows",
+	}}
+	{panels}
+	onMarker={(data: Marker) => (marker = data)}
+>
 	{@render children()}
 </Scrollyteller>

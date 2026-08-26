@@ -1,5 +1,5 @@
 <script lang="ts">
-	import type { Marker } from "./types";
+	import type { Marker } from "./types.ts";
 	import Stage from "./components/Stage.svelte";
 	import Scrollyteller from "./components/BoundScrollyteller.svelte";
 
@@ -15,7 +15,7 @@
 
 <div class="app">
 	<Scrollyteller {panels} bind:marker>
-		<Stage car={marker?.car || "ford"} />
+		<Stage car={marker?.car || "falcon"} />
 	</Scrollyteller>
 </div>
 
