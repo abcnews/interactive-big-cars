@@ -29,7 +29,11 @@
 </svelte:head>
 
 <div class="root">
-	<img src={current?.src} alt={current?.alt} />
+	{#if typeof current !== "undefined"}
+		<img src={current?.src} alt={current?.alt} />
+	{:else}
+		<div>Error: Car undefined.</div>
+	{/if}
 </div>
 
 <style lang="scss">
