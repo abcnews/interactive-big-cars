@@ -30,7 +30,7 @@
 
 <div class="root">
 	{#if typeof current !== "undefined"}
-		<img src={current?.src} alt={current?.alt} />
+		<img class="car-illustration" src={current?.src} alt={current?.alt} />
 	{:else}
 		<div>Error: Car undefined.</div>
 	{/if}
@@ -38,6 +38,18 @@
 
 <style lang="scss">
 	.root {
-		width: 100%;
+		overflow: clip;
+		aspect-ratio: 16/9;
+		height: 100%;
+		width: unset;
+		max-width: 100%;
+		@container (max-aspect-ratio:16/9) {
+
+			// width: 100%;
+			// height: auto;
+		}
+	}
+	.car-illustration {
+		transform: translateX(6%);
 	}
 </style>

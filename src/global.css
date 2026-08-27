@@ -1,11 +1,17 @@
 .scrollyteller--mobile-row-variant .viz.viz--resized.viz--right {
+	/* Tweak Scrollyteller Viz */
+	height: unset;
+	padding-bottom: 0px;
+	aspect-ratio: 16/9.1;
+
 	/*
 	Scrollyteller has hard-coded background gradients...
 	... Let's override, so our background colour blends.
 	*/
 	background: linear-gradient(
 		to bottom,
-		#efefef 90%,
+		#efefef 97%,
+		transparent 100%,
 		transparent 100%
-	) !important;
+	)
 }
