@@ -1,0 +1,11 @@
+.scrollyteller--mobile-row-variant .viz.viz--resized.viz--right {
+	/*
+	Scrollyteller has hard-coded background gradients...
+	... Let's override, so our background colour blends.
+	*/
+	background: linear-gradient(
+		to bottom,
+		#efefef 90%,
+		transparent 100%
+	) !important;
+}
