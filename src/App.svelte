@@ -19,7 +19,10 @@
 	</Scrollyteller>
 </div>
 
-<svelte:window bind:scrollY={scroll.y} />
+<svelte:head>
+	<title>Hello world!</title>
+	<meta name="description" content="This is where the description goes for SEO" />
+</svelte:head>
 
 <style lang="scss">
 </style>

@@ -21,6 +21,13 @@
 	const current = $derived(cars.get(car));
 </script>
 
+<!-- Preload the SVG images -->
+<svelte:head>
+	{#each cars.values() as car}
+		<link rel="preload" href={car.src} as="image" />
+	{/each}
+</svelte:head>
+
 <div class="root">
 	<img src={current?.src} alt={current?.alt} />
 </div>

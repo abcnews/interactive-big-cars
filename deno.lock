@@ -9,10 +9,8 @@
     "npm:@types/alpinejs@^3.13.11": "3.13.11",
     "npm:@types/common-tags@^1.8.4": "1.8.4",
     "npm:@types/node@^24.13.3": "24.13.3",
-    "npm:alpinejs@^3.16.3": "3.16.3",
     "npm:sass-embedded@^1.103.1": "1.103.1",
     "npm:svelte-check@^4.7.6": "4.7.6_svelte@5.56.10_typescript@6.0.3",
-    "npm:svelte-portal@^2.2.1": "2.2.1",
     "npm:svelte@^5.56.10": "5.56.10",
     "npm:typescript@~6.0.3": "6.0.3",
     "npm:vite@^8.2.2": "8.2.2_@types+node@24.13.3_sass-embedded@1.103.1"
@@ -788,10 +786,8 @@
         "npm:@types/alpinejs@^3.13.11",
         "npm:@types/common-tags@^1.8.4",
         "npm:@types/node@^24.13.3",
-        "npm:alpinejs@^3.16.3",
         "npm:sass-embedded@^1.103.1",
         "npm:svelte-check@^4.7.6",
-        "npm:svelte-portal@^2.2.1",
         "npm:svelte@^5.56.10",
         "npm:typescript@~6.0.3",
         "npm:vite@^8.2.2"
