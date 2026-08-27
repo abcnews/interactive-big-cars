@@ -17,10 +17,8 @@
 	type Props = Marker;
 
 	const { car }: Props = $props();
-	$inspect(car);
 
 	const current = $derived(cars.get(car));
-	$inspect(current);
 </script>
 
 <div class="root">
@@ -30,12 +28,5 @@
 <style lang="scss">
 	.root {
 		width: 100%;
-		// aspect-ratio: 16/9;
-		// height: 100%;
-		// width: unset;
-		// @container (max-aspect-ratio:16/9) {
-		// 	width: 100%;
-		// 	height: auto;
-		// }
 	}
 </style>
