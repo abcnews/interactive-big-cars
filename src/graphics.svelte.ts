@@ -13,7 +13,7 @@
 	import dotsram from "./assets/scrollyteller_dot_ram.svg";
 
 	// Block height
-	import falconheight from "./assets/scrollyteller_falcon_colourblock.svg";
+	import falconheight from "./assets/scrollyteller_colourblock_falcon.svg";
 	import rav4height from "./assets/scrollyteller_colourblock_rav4.svg";
 	import everestheight from "./assets/scrollyteller_colourblock_everest.svg";
 	import raptorheight from "./assets/scrollyteller_colourblock_raptor.svg";
