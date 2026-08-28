@@ -15,8 +15,6 @@
 <Scrollyteller
 	layout={{
 		align: "left",
-		// resizeInteractive: false
-		// transparentFloat: true
 		mobileVariant: "rows",
 	}}
 	{panels}
