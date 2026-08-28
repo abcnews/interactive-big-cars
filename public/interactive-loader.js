@@ -4,8 +4,6 @@
 	const manifestUrl = `${baseUrl}/.vite/manifest.json`;
 
 	const manifest = await fetch(manifestUrl).then((r) => r.json());
-	console.log(manifest);
-
 	const scriptSrc = manifest["index.html"].file;
 
 	const script = document.createElement("script");

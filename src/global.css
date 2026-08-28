@@ -1,9 +1,10 @@
 .scrollyteller--mobile-row-variant .viz.viz--resized.viz--right {
 	/* Tweak Scrollyteller Viz */
-	/*Breaks desktop*/
-	/*height: unset;
+	@media (max-width: 62rem) {
+		height: auto;
+	}
 	padding-bottom: 0px;
-	aspect-ratio: 16/9.1;*/
+	aspect-ratio: 16/9.1;
 
 	/*
 	Scrollyteller has hard-coded background gradients...
@@ -14,5 +15,5 @@
 		#efefef 97%,
 		transparent 100%,
 		transparent 100%
-	)
+	);
 }
