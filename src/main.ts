@@ -8,16 +8,20 @@ import "./global.css";
 
 import App from "./App.svelte";
 
-await whenDOMReady;
-await whenOdysseyLoaded;
+const init = async () => {
+	await whenDOMReady;
+	await whenOdysseyLoaded;
 
-const scrollyMounts = selectMounts("scrollyteller");
+	const scrollyMounts = selectMounts("scrollyteller");
 
-scrollyMounts.forEach((mountNode) => {
-	const scrollyData = loadScrollyteller<Marker>(mountNode, "u-full", "mark");
+	scrollyMounts.forEach((mountNode) => {
+		const scrollyData = loadScrollyteller<Marker>(mountNode, "u-full", "mark");
 
-	mount(App, {
-		target: scrollyData.mountNode,
-		props: { panels: scrollyData.panels },
+		mount(App, {
+			target: scrollyData.mountNode,
+			props: { panels: scrollyData.panels },
+		});
 	});
-});
+};
+
+init();

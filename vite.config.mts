@@ -1,13 +1,18 @@
 import { defineConfig } from "vite";
 import { svelte } from "@sveltejs/vite-plugin-svelte";
+import mkcert from "vite-plugin-mkcert";
 
 // https://vite.dev/config/
 export default defineConfig({
-	plugins: [svelte()],
+	plugins: [mkcert(), svelte()],
 	server: {
-		host: "0.0.0.0",
-		cors: true,
-		origin: "http://localhost:5173",
+		cors: {
+			origin: [
+				/^https?:\/\/(?:[a-z0-9-]+\.)*abc\.net\.au(?::\d+)?$/i,
+				/^https?:\/\/(?:[a-z0-9-]+\.)*abc-prod\.net\.au(?::\d+)?$/i,
+			],
+		},
+		origin: "https://localhost:5173",
 	},
 	base: "./",
 	build: {
