@@ -10,18 +10,18 @@ import dotsfalcon from "./assets/Bonnet/scrollyteller_dots_falcon.svg";
 import dotsrav4 from "./assets/Bonnet/scrollyteller_dots_rav4.svg";
 import dotseverest from "./assets/Bonnet/scrollyteller_dots_everest.svg";
 import dotsraptor from "./assets/Bonnet/scrollyteller_dots_raptor.svg";
-import dotsram from "./assets/Bonnet/scrollyteller_dot_ram.svg";
+import dotsram from "./assets/Bonnet/scrollyteller_dots_ram.svg";
 
 // Block height
-import falconheight from "./assets/Colour/scrollyteller_colourblock_falcon.svg";
-import rav4height from "./assets/Colour/scrollyteller_colourblock_rav4.svg";
-import everestheight from "./assets/Colour/scrollyteller_colourblock_everest.svg";
-import raptorheight from "./assets/Colour/scrollyteller_colourblock_raptor.svg";
-import ramheight from "./assets/Colour/scrollyteller_ram_colourblock.svg";
+import falconheight from "./assets/ColourBlock/scrollyteller_colourblock_falcon.svg";
+import rav4height from "./assets/ColourBlock/scrollyteller_colourblock_rav4.svg";
+import everestheight from "./assets/ColourBlock/scrollyteller_colourblock_everest.svg";
+import raptorheight from "./assets/ColourBlock/scrollyteller_colourblock_raptor.svg";
+import ramheight from "./assets/ColourBlock/scrollyteller_colourblock_ram.svg";
 
 // Other
 import motherandchild from "./assets/Plain/scrollyteller_motherandchild.svg";
-import dotsramheight from "./assets/Bonnet/scrollyteller_colourblock_dots_RAM.svg";
+import dotsramheight from "./assets/Bonnet/scrollyteller_colourblock_dots_ram.svg";
 
 import { SvelteMap } from "svelte/reactivity";
 
