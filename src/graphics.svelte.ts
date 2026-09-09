@@ -21,7 +21,7 @@ import ramheight from "./assets/Colour/scrollyteller_ram_colourblock.svg";
 
 // Other
 import motherandchild from "./assets/Plain/scrollyteller_motherandchild.svg";
-import ramboth from "./assets/Bonnet/scrollyteller_colourblock_dots_RAM.svg";
+import dotsramheight from "./assets/Bonnet/scrollyteller_colourblock_dots_RAM.svg";
 
 import { SvelteMap } from "svelte/reactivity";
 
@@ -142,9 +142,9 @@ export const cars = new SvelteMap([
 		},
 	],
 	[
-		"ramboth",
+		"ramheightbonnet",
 		{
-			src: ramboth,
+			src: dotsramheight,
 			alt: "Chevrolet Ram with dots at bonnet and height blocked out.",
 		},
 	],
