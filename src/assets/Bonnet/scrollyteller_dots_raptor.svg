@@ -2,6 +2,10 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 4000 3000">
   <defs>
     <style>
+      .cls-1, .cls-2 {
+        stroke-width: 6px;
+      }
+
       .cls-1, .cls-2, .cls-3 {
         stroke-linecap: round;
         stroke-linejoin: round;
@@ -12,12 +16,8 @@
         stroke: #000;
       }
 
-      .cls-1, .cls-2, .cls-5 {
-        stroke-width: 4px;
-      }
-
       .cls-2 {
-        stroke-dasharray: 12.09 14.1;
+        stroke-dasharray: 11.93 17.89;
       }
 
       .cls-7 {
@@ -74,6 +74,10 @@
 
       .cls-18 {
         fill: #eee;
+      }
+
+      .cls-5 {
+        stroke-width: 4px;
       }
 
       .cls-6 {
@@ -548,9 +552,9 @@
       </g>
       <g id="DOTS">
         <g>
-          <line class="cls-1" x1="192" y1="1152.36" x2="198" y2="1152.36"/>
-          <line class="cls-2" x1="212.1" y1="1152.36" x2="1409.76" y2="1152.36"/>
-          <line class="cls-1" x1="1416.81" y1="1152.36" x2="1422.81" y2="1152.36"/>
+          <line class="cls-1" x1="192" y1="1263.86" x2="198" y2="1263.86"/>
+          <line class="cls-2" x1="215.89" y1="1263.86" x2="803.29" y2="1263.86"/>
+          <line class="cls-1" x1="812.24" y1="1263.86" x2="818.24" y2="1263.86"/>
         </g>
       </g>
     </g>
