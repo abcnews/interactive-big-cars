@@ -2,7 +2,7 @@
 	import type { Marker } from "../types";
 	import { cars } from "../graphics.svelte";
 
-	const listOfCars = $derived(cars.values());
+	const listOfCars = $derived([...cars.values()]);
 
 	type Props = Marker;
 

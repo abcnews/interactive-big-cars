@@ -3,9 +3,6 @@
 	import Stage from "./components/Stage.svelte";
 	import Scrollyteller from "./components/BoundScrollyteller.svelte";
 
-	/* Shared state */
-	import { scroll } from "./stores/scroll.svelte";
-
 	/* Component props */
 	const { panels } = $props();
 
