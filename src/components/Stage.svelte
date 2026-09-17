@@ -2,7 +2,25 @@
 	import type { Marker } from "../types";
 	import { cars } from "../graphics.svelte";
 
-	const listOfCars = $derived([...cars.values()]);
+	// NOTE: If other images are used they need to
+	// be added here to enable pre-load.
+	const carsOnPage = [
+		"falcon",
+		"falconheight",
+		"rav4",
+		"everest",
+		"everestheight",
+		"raptor",
+		"ram",
+		"ramheight",
+		"ramheightbonnet",
+	];
+
+	const preLoads = $derived.by(() => {
+		return carsOnPage
+			.map((key) => cars.get(key))
+			.filter((car) => car !== undefined);
+	});
 
 	type Props = Marker;
 
@@ -13,7 +31,7 @@
 
 <!-- Preload the SVG images -->
 <svelte:head>
-	{#each listOfCars as car}
+	{#each preLoads as car}
 		<link rel="preload" href={car.src} as="image" />
 	{/each}
 </svelte:head>
